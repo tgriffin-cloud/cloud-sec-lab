@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Terraform working dirs and local state
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*.override.tf
+*.override.tf.json
