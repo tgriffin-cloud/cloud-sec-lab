@@ -10,6 +10,13 @@ The initial work is in AWS, with a design that can expand into multi-cloud envir
   - SecurityAuditors group and membership
   - Role assumption tested and verified using AWS STS + MFA
 
+## Upcoming Work
+- Terraform remote state with S3 + DynamoDB  
+- Incident response automation with AWS Lambda + CloudWatch  
+- Secure VPC and networking setup (NACLs, Security Groups)  
+- Multi-cloud extension: replicate security patterns in GCP  
+- Compliance dashboards with AWS Config and Security Hub  
+
 ## Scope
 - Identity and Access Management (IAM) with least-privilege design  
 - Secure infrastructure automation with Terraform (IaC)  
