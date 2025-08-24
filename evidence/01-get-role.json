@@ -1,0 +1,50 @@
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "SecurityAuditorRole",
+        "RoleId": "AROA4UKTSXMLT75LKFLZQ",
+        "Arn": "arn:aws:iam::868295555863:role/SecurityAuditorRole",
+        "CreateDate": "2025-08-23T00:20:18+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "AllowSameAccountWithMFA",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "AWS": "arn:aws:iam::868295555863:root"
+                    },
+                    "Action": "sts:AssumeRole",
+                    "Condition": {
+                        "Bool": {
+                            "aws:MultiFactorAuthPresent": "true"
+                        }
+                    }
+                }
+            ]
+        },
+        "MaxSessionDuration": 3600,
+        "Tags": [
+            {
+                "Key": "Environment",
+                "Value": "Sandbox"
+            },
+            {
+                "Key": "Owner",
+                "Value": "Tontrisha"
+            },
+            {
+                "Key": "Project",
+                "Value": "CloudSecurityLab"
+            },
+            {
+                "Key": "ManagedBy",
+                "Value": "Terraform"
+            }
+        ],
+        "RoleLastUsed": {
+            "LastUsedDate": "2025-08-23T00:35:12+00:00",
+            "Region": "us-east-1"
+        }
+    }
+}
