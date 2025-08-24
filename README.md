@@ -1,8 +1,18 @@
 # Cloud Security Lab
 
-This repository demonstrates hands-on cloud security engineering projects with verifiable artifacts.  
-It highlights IAM governance, secure infrastructure automation with Terraform, compliance as code,  
-and incident response workflows. Initial work is in AWS, with a design that can expand into GCP and multi-cloud environments.
+
+This repository is a hands-on portfolio that demonstrates practical  
+cloud security engineering.  
+
+The current focus is AWS, with expansion planned for GCP.  
+Each project includes evidence files, Terraform code, and validation  
+outputs that prove security controls were implemented and tested.  
+
+Key themes include:  
+- Identity and Access Management (IAM) with MFA enforcement  
+- Least-privilege access and role assumption (verified with AWS STS)  
+- Compliance and monitoring with CloudTrail, Config, and Security Hub  
+- Automation with Terraform for secure infrastructure
 
 ## Projects Roadmap
 - **Project 1: IAM Security Auditor Role with MFA Enforcement** — **Completed**
