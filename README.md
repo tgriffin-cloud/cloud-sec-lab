@@ -1,15 +1,15 @@
 # Cloud Security Lab
 
-This Cloud Security Lab is where I explore practical security engineering in the cloud.  
-It focuses on IAM governance, automation with Terraform, and hands-on security practices.  
-The initial work is in AWS, with a design that can expand into multi-cloud environments.
+This repository demonstrates hands-on cloud security engineering projects with verifiable artifacts.  
+It highlights IAM governance, secure infrastructure automation with Terraform, compliance as code,  
+and incident response workflows. Initial work is in AWS, with a design that can expand into GCP and multi-cloud environments.
 
 ## Projects Roadmap
 - **Project 1: IAM Security Auditor Role with MFA Enforcement** — **Completed**
-  - MFA-enforced role with AWS managed policies: `SecurityAudit` and `ReadOnlyAccess`
-  - Configured SecurityAuditors group and added membership
-  - Validated role assumption with AWS STS + MFA
-  - Captured CloudTrail and denial evidence
+- Enforced MFA at the AssumeRole boundary with AWS managed policies: `SecurityAudit` and `ReadOnlyAccess`
+- Configured `SecurityAuditors` group and validated membership
+- Verified role assumption with AWS STS + MFA
+- Captured CloudTrail and denial evidence
 
   **Evidence (click to open files):**
   - [Trust policy](./evidence/00-trust-policy.json)  
@@ -23,11 +23,21 @@ The initial work is in AWS, with a design that can expand into multi-cloud envir
   - [AssumeRole without MFA (denied)](./evidence/08-assumerole-no-mfa-denied.txt)  
   - [AssumeRole with MFA (sanitized)](./evidence/09-assumerole-with-mfa-sanitized.json)  
 
-- **Project 2: Terraform Remote State Hardening** — *Planned*  
-- **Project 3: Incident Response Automation (Lambda + CloudWatch)** — *Planned*  
-- **Project 4: Compliance as Code (Terraform guardrails)** — *Planned*  
-- **Project 5: Multi-Cloud Security (AWS + GCP)** — *Planned*  
-- **Project 6: Monitoring Dashboards (Config + Security Hub)** — *Planned*  
+
+### **Project 2: Terraform Remote State Hardening — Planned**
+- Secure S3 bucket and DynamoDB table for Terraform state management
+
+### **Project 3: Incident Response Automation (Lambda + CloudWatch) — Planned**
+- Automate alerts and remediation for suspicious IAM and S3 activity
+
+### **Project 4: Compliance as Code (Terraform Guardrails) — Planned**
+- Enforce baseline security controls using Terraform policies
+
+### **Project 5: Multi-Cloud Security (AWS + GCP) — Planned**
+- Replicate IAM and compliance patterns across GCP environments
+
+### **Project 6: Monitoring Dashboards (Config + Security Hub) — Planned**
+- Build compliance and threat monitoring dashboards
 
 ## Scope
 - Identity and Access Management (IAM) with least-privilege design  
