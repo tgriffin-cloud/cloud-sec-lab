@@ -1,0 +1,64 @@
+{
+  "additionalEventData": {
+    "ExtendedRequestId": "MTp1cy1lYXN0LTE6MTc1NjA1OTA5ODI3NjpSOnlVcVllNldR",
+    "RequestDetails": {
+      "awsServingRegion": "us-east-1",
+      "endpointType": "regional"
+    }
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "7aa0fd96-5ec4-4db8-897f-0964e6de5016",
+  "eventName": "AssumeRole",
+  "eventSource": "sts.amazonaws.com",
+  "eventTime": "2025-08-24T18:11:38Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.08",
+  "managementEvent": true,
+  "readOnly": true,
+  "recipientAccountId": "868295555863",
+  "requestID": "a12c4b21-c4f1-423b-ae28-615b3e6c6179",
+  "requestParameters": {
+    "roleArn": "arn:aws:iam::868295555863:role/SecurityAuditorRole",
+    "roleSessionName": "audit-session",
+    "serialNumber": "arn:aws:iam::868295555863:mfa/everyday_device"
+  },
+  "resources": [
+    {
+      "ARN": "arn:aws:iam::868295555863:role/SecurityAuditorRole",
+      "accountId": "868295555863",
+      "type": "AWS::IAM::Role"
+    },
+    {
+      "ARN": "arn:aws:iam::868295555863:mfa/everyday_device",
+      "accountId": "868295555863",
+      "type": "AWS::IAM::MFADevice"
+    }
+  ],
+  "responseElements": {
+    "assumedRoleUser": {
+      "arn": "arn:aws:sts::868295555863:assumed-role/SecurityAuditorRole/audit-session",
+      "assumedRoleId": "AROA4UKTSXMLT75LKFLZQ:audit-session"
+    },
+    "credentials": {
+      "accessKeyId": "ASIA4UKTSXML7JRDLJ5F",
+      "expiration": "Aug 24, 2025, 7:11:38 PM",
+      "sessionToken": "IQoJb3JpZ2luX2VjEPP//////////wEaCXVzLWVhc3QtMSJHMEUCIAac2u+JA/++bTIoFzXB8x7v/l6QDiSnW3cmw2MW7+zYAiEAsNu+vr8jAAtyuMLbsyd8B8LtuPs97fDYVEg1zTQAPZ0qmgIISxAAGgw4NjgyOTU1NTU4NjMiDPZFFfwV2lbblx+T7Sr3AeWgFNObXNxkNh3EeFbKSBDPk7q1bmxoy02yZzfEzV7TAerSQCQyYLCzsrhuKzyponU0R52/KBvaUZ3c8Pk9Lq26/sbp4zIn3wYdDzQgdt4pWAXz8GUnAlbjk64R4Ejdc9JMoXr/b7ZC8XkkYmM2+jzPIk769L1qGs/wU2gE9vpTLQjqjK1LK+vE/Eh4qlETZsnypY+0QHUhZKRUiZWuRGH0lJmNQLfiQYmiAdHrdghxax51IjbN2jO8SB8RfbPq1s3l1PH/1W3/EMeecXD5vJTzx+nUp87E7OIpmEI8p3au2TDIYKFPtQcvAoGTP21lF8aRwbYLlfMw2qutxQY6nQGYb+RkXMuSad+k1FFkyc/u7hmugjrZZ3kmIb+Qsd5Mq7kmEclIH6kE2KPEgngxWkz3miPRztkYvCcHN3CWpmuOSddQbqIiV6H0duEDfoNcx1DL0GTWzYWJStSOqJiMskjxp/TSsujIJ4AsIqqnM1w9rZXIITz4rOr0qh1rVAq30ZmdE77HT/7h3O2poa5nDxTuHNhDMCMGkkjZMqBE"
+    }
+  },
+  "sourceIPAddress": "38.40.49.183",
+  "tlsDetails": {
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "sts.us-east-1.amazonaws.com",
+    "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.28.12 md/awscrt#0.27.5 ua/2.1 os/macos#24.6.0 md/arch#x86_64 lang/python#3.13.4 md/pyimpl#CPython m/E,Z,b cfg/retry-mode#standard md/installer#exe sid/97128be352be md/prompt#off md/command#sts.assume-role",
+  "userIdentity": {
+    "accessKeyId": "AKIA4UKTSXMLQPCIZNHH",
+    "accountId": "868295555863",
+    "arn": "arn:aws:iam::868295555863:user/tontrisha.griffin",
+    "principalId": "AIDA4UKTSXMLTDBQNOTA4",
+    "type": "IAMUser",
+    "userName": "tontrisha.griffin"
+  }
+}

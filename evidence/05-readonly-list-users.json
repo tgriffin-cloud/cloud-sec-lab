@@ -1,0 +1,26 @@
+{
+    "Users": [
+        {
+            "Path": "/",
+            "UserName": "ezra.fields",
+            "UserId": "AIDA4UKTSXML5DWSK3XOY",
+            "Arn": "arn:aws:iam::868295555863:user/ezra.fields",
+            "CreateDate": "2025-08-05T21:24:23+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "tontrisha.griffin",
+            "UserId": "AIDA4UKTSXMLTDBQNOTA4",
+            "Arn": "arn:aws:iam::868295555863:user/tontrisha.griffin",
+            "CreateDate": "2025-08-05T23:46:54+00:00",
+            "PasswordLastUsed": "2025-08-22T22:33:59+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "willie.griffin",
+            "UserId": "AIDA4UKTSXML6T5YA4KWO",
+            "Arn": "arn:aws:iam::868295555863:user/willie.griffin",
+            "CreateDate": "2025-08-05T16:23:34+00:00"
+        }
+    ]
+}

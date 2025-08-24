@@ -1,0 +1,8 @@
+{
+  "AssumedRoleUser": {
+    "AssumedRoleId": "AROA4UKTSXMLT75LKFLZQ:with-mfa-test",
+    "Arn": "arn:aws:sts::868295555863:assumed-role/SecurityAuditorRole/with-mfa-test"
+  },
+  "RoleArn": "arn:aws:sts::868295555863:assumed-role/SecurityAuditorRole/with-mfa-test",
+  "Expiration": "2025-08-24T19:39:09+00:00"
+}
