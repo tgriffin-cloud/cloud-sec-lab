@@ -1,0 +1,2 @@
+
+An error occurred (InvalidLocationConstraint) when calling the CreateBucket operation: The specified location-constraint is not valid
