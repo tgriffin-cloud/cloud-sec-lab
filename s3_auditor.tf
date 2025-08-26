@@ -21,7 +21,7 @@ data "aws_iam_policy_document" "s3_auditor_trust" {
 }
 
 resource "aws_iam_role" "s3_auditor" {
-  name               = "S3AuditorRole"
+  name               = "ExampleS3AuditorRole"
   assume_role_policy = data.aws_iam_policy_document.s3_auditor_trust.json
 }
 
@@ -31,10 +31,10 @@ resource "aws_iam_role_policy_attachment" "s3_auditor_readonly" {
 }
 
 resource "aws_iam_group" "s3_auditors" {
-  name = "S3Auditors"
+  name = "ExampleS3Auditors"
 }
 
 resource "aws_iam_user_group_membership" "s3_auditors_membership" {
-  user   = "tontrisha.griffin"                # must already exist
+  user   = "example.user"  # must already exist
   groups = [aws_iam_group.s3_auditors.name]
 }
