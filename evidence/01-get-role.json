@@ -1,10 +1,10 @@
 {
     "Role": {
         "Path": "/",
-        "RoleName": "SecurityAuditorRole",
-        "RoleId": "AROA4UKTSXMLT75LKFLZQ",
-        "Arn": "arn:aws:iam::868295555863:role/SecurityAuditorRole",
-        "CreateDate": "2025-08-23T00:20:18+00:00",
+        "RoleName": "ExampleAuditorRole",
+        "RoleId": "AROAxxxxxxxxxxxxxxxxx",
+        "Arn": "arn:aws:iam::123456789012:role/ExampleAuditorRole",
+        "CreateDate": "2025-01-01T00:00:00Z",
         "AssumeRolePolicyDocument": {
             "Version": "2012-10-17",
             "Statement": [
@@ -12,7 +12,7 @@
                     "Sid": "AllowSameAccountWithMFA",
                     "Effect": "Allow",
                     "Principal": {
-                        "AWS": "arn:aws:iam::868295555863:root"
+                        "AWS": "arn:aws:iam::123456789012:root"
                     },
                     "Action": "sts:AssumeRole",
                     "Condition": {
@@ -31,7 +31,7 @@
             },
             {
                 "Key": "Owner",
-                "Value": "Tontrisha"
+                "Value": "example.owner"
             },
             {
                 "Key": "Project",
@@ -43,7 +43,7 @@
             }
         ],
         "RoleLastUsed": {
-            "LastUsedDate": "2025-08-23T00:35:12+00:00",
+            "LastUsedDate": "2025-01-01T01:00:00Z",
             "Region": "us-east-1"
         }
     }
