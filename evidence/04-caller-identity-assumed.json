@@ -1,5 +1,5 @@
 {
-    "UserId": "AROA4UKTSXMLT75LKFLZQ:botocore-session-1755971687",
-    "Account": "868295555863",
-    "Arn": "arn:aws:sts::868295555863:assumed-role/SecurityAuditorRole/botocore-session-1755971687"
+    "UserId": "AROAxxxxxxxxxxxxxxxxxxx:botocore-session-1234567890",
+    "Account": "123456789012",
+    "Arn": "arn:aws:sts::123456789012:assumed-role/ExampleAuditorRole/botocore-session-1234567890"
 }
