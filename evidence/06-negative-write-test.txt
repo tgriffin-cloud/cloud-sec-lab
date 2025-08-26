@@ -1,2 +1,2 @@
 
-An error occurred (AccessDenied) when calling the CreateBucket operation: User: arn:aws:sts::868295555863:assumed-role/SecurityAuditorRole/botocore-session-1756060766 is not authorized to perform: s3:CreateBucket on resource: "arn:aws:s3:::tgriffin-auditor-neg-1756060782" because no identity-based policy allows the s3:CreateBucket action
+An error occurred (AccessDenied) when calling the CreateBucket operation: User: arn:aws:sts::123456789012:assumed-role/ExampleRoleName/botocore-session-1234567890 is not authorized to perform: s3:CreateBucket on resource: "arn:aws:s3:::example-bucket-name" because no identity-based policy allows the s3:CreateBucket action
