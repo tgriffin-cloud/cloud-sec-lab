@@ -5,7 +5,7 @@
             "Sid": "AllowSameAccountWithMFA",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::868295555863:root"
+                "AWS": "arn:aws:iam::123456789012:root"
             },
             "Action": "sts:AssumeRole",
             "Condition": {
