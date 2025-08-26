@@ -1,12 +1,9 @@
 ############################################################
-# Security Auditor Role (assumable with MFA by this account)
+# Example Auditor Role (assumable with MFA by this account)
 ############################################################
 
-# Replace this with the actual 12-digit AWS account ID if different
-
 locals {
-# Stores the AWS account ID, instead of writing the account number, reference local.account_id
-  account_id = "868295555863"
+  account_id = "123456789012"
 }
 
 # Trust policy: only principals in this account may assume, AND MFA must be present
@@ -30,26 +27,26 @@ data "aws_iam_policy_document" "auditor_trust" {
   }
 }
 
-resource "aws_iam_role" "security_auditor" {
-  name               = "SecurityAuditorRole"
+resource "aws_iam_role" "example_auditor" {
+  name               = "ExampleAuditorRole"
   assume_role_policy = data.aws_iam_policy_document.auditor_trust.json
 
   tags = {
     Project     = "CloudSecurityLab"
     Environment = "Sandbox"
-    Owner       = "Tontrisha"
-    ManagedBy	= "Terraform"
+    Owner       = "example.owner"
+    ManagedBy   = "Terraform"
   }
 }
 
 # Attach AWS-managed read-only policies suitable for auditing
 resource "aws_iam_role_policy_attachment" "auditor_securityaudit" {
-  role       = aws_iam_role.security_auditor.name
+  role       = aws_iam_role.example_auditor.name
   policy_arn = "arn:aws:iam::aws:policy/SecurityAudit"
 }
 
 resource "aws_iam_role_policy_attachment" "auditor_readonly" {
-  role       = aws_iam_role.security_auditor.name
+  role       = aws_iam_role.example_auditor.name
   policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
 }
 
@@ -57,39 +54,39 @@ resource "aws_iam_role_policy_attachment" "auditor_readonly" {
 # Group allowed to assume the role + permissions + membership
 ############################################################
 
-resource "aws_iam_group" "security_auditors" {
-  name = "SecurityAuditors"
+resource "aws_iam_group" "example_auditors" {
+  name = "ExampleAuditors"
 }
 
-# Minimal permission that lets members  of the group assume the role
-data "aws_iam_policy_document" "allow_assume_auditor_role" {
+# Minimal permission that lets members of the group assume the role
+data "aws_iam_policy_document" "allow_assume_example_auditor" {
   statement {
-    sid     = "AllowAssumeSecurityAuditorRole"
+    sid     = "AllowAssumeExampleAuditorRole"
     effect  = "Allow"
     actions = ["sts:AssumeRole"]
-    resources = [aws_iam_role.security_auditor.arn]
+    resources = [aws_iam_role.example_auditor.arn]
   }
 }
 
-resource "aws_iam_policy" "assume_auditor_role" {
-  name        = "AllowAssumeSecurityAuditorRole"
-  description = "Permit sts:AssumeRole into SecurityAuditorRole"
-  policy      = data.aws_iam_policy_document.allow_assume_auditor_role.json
+resource "aws_iam_policy" "assume_example_auditor" {
+  name        = "AllowAssumeExampleAuditorRole"
+  description = "Permit sts:AssumeRole into ExampleAuditorRole"
+  policy      = data.aws_iam_policy_document.allow_assume_example_auditor.json
 
   tags = {
-    Project 	= "CloudSecurityLab"
+    Project     = "CloudSecurityLab"
     Environment = "Sandbox"
-    Managedby	= "Terraform"
+    ManagedBy   = "Terraform"
   }
 }
 
-resource "aws_iam_group_policy_attachment" "security_auditors_can_assume" {
-  group      = aws_iam_group.security_auditors.name
-  policy_arn = aws_iam_policy.assume_auditor_role.arn
+resource "aws_iam_group_policy_attachment" "example_auditors_can_assume" {
+  group      = aws_iam_group.example_auditors.name
+  policy_arn = aws_iam_policy.assume_example_auditor.arn
 }
 
-# Adds the IAM user to the SecurityAuditors group so you can assume the role 
-resource "aws_iam_user_group_membership" "security_auditors_membership" {
-  user   = "tontrisha.griffin"
-  groups = [aws_iam_group.security_auditors.name]
+# Adds the IAM user to the ExampleAuditors group
+resource "aws_iam_user_group_membership" "example_auditor_membership" {
+  user   = "example.user"
+  groups = [aws_iam_group.example_auditors.name]
 }
